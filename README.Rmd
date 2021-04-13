@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# rcolorutils
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+
+This package is designed to help you find colors that are similar to one specific color. It's especially useful to answer a question like "what other blues are built in to R"?
+
+## Installation
+
+This package is not on CRAN, so you need to install it with from [GitHub](https://github.com/) with:
+
+```{r eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("smach/rcolorutils")
+```
+## Examples
+
+
+The `nearRcolor()` function returns a vector of nearby colors:
+
+```{r }
+library(rcolorutils)
+nearRcolor("skyblue")
+```
+
+```{r }
+nearRcolor("tomato")
+```
+
+If you'd like to _see_ the colors, wrap the results of `nearRcolor()` in the `plotCol()` function:
+
+```{r }
+plotCol(nearRcolor("skyblue"))
+```
+
+```{r }
+plotCol(nearRcolor("tomato"))
+```
+
+Note that the scales package's show_col() function is another way to display the colors:
+
+```{r }
+scales::show_col(nearRcolor("green"))
+```
+
+If you don't get enough colors, increase the distance.
+
+```{r }
+plotCol(nearRcolor("darkgreen"))
+```
+
+You may have to fiddle with the distance number to get what you want.
+
+```{r }
+plotCol(nearRcolor("darkgreen", "rgb", dist = 80))
+```
