@@ -16,3 +16,5 @@ Suggests:
     rmarkdown,
     scales
 VignetteBuilder: knitr
+URL: https://github.com/smach/rcolorutils
+BugReports: https://github.com/smach/rcolorutils/issues
