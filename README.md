@@ -6,13 +6,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package is designed to help you find colors that are similar to one
-specific color. It’s especially useful to answer a question like “what
-other blues are built in to R”?
+This package is designed to help you work with R’s built-in colors.
 
 ## Installation
 
-This package is not on CRAN, so you need to install it with from
+rcolorutils isn’t on CRAN, so you’ll need to install it with from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -20,9 +18,16 @@ This package is not on CRAN, so you need to install it with from
 devtools::install_github("smach/rcolorutils")
 ```
 
-## Examples
+## What You Can Do
 
-The `nearRcolor()` function returns a vector of nearby colors:
+You can see searchable table with all colors with the
+`create_color_table()` function.
+
+rcolorutils also has functions to help you find built-in colors that are
+similar to one specific color. It’s especially useful to answer a
+question like “what other blues are built in to R”?
+
+The `nearRcolor()` function will return a vector of nearby colors:
 
 ``` r
 library(rcolorutils)

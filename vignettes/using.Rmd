@@ -18,7 +18,16 @@ knitr::opts_chunk$set(
 library(rcolorutils)
 ```
 
-This package is designed to help you find colors that are similar to one specific color. It's especially useful to answer a question like "what other blues are built in to R"?
+This package is designed to help you work with R's built-in colors.
+
+You can see searchable table with all colors with the `create_color_table()` function.
+
+```{r}
+create_color_table()
+```
+
+
+rcolorutils also has functions to help you find built-in colors that are similar to one specific color. It's especially useful to answer a question like "what other blues are built in to R"?
 
 The `nearRcolor()` function will return a vector of nearby colors:
 
