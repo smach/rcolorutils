@@ -1,0 +1,59 @@
+---
+title: "Using this package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using this package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rcolorutils)
+```
+
+This package is designed to help you find colors that are similar to one specific color. It's especially useful to answer a question like "what other blues are built in to R"?
+
+The `nearRcolor()` function will return a vector of nearby colors:
+
+```{r }
+nearRcolor("skyblue")
+```
+
+```{r }
+nearRcolor("tomato")
+```
+
+If you'd like to _see_ the colors, wrap the results of `nearRcolor()` in the `plotCol()` function:
+
+```{r }
+plotCol(nearRcolor("skyblue"))
+```
+
+```{r }
+plotCol(nearRcolor("tomato"))
+```
+
+Note that the scales package's show_col() function is another way to display the colors:
+
+```{r }
+scales::show_col(nearRcolor("green"))
+```
+
+If you don't get enough colors, increase the distance.
+
+```{r }
+plotCol(nearRcolor("darkgreen"))
+```
+
+You may have to fiddle with the distance number to get what you want.
+
+```{r }
+plotCol(nearRcolor("darkgreen", "rgb", dist = 80))
+```

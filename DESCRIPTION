@@ -1,0 +1,18 @@
+Package: rcolorutils
+Type: Package
+Title: Explore Built-in R Colors by Name
+Version: 0.1.0
+Author: Sharon Machlis
+Maintainer: Sharon Machlis <sharon_machlis@idg.com>
+Description: Look for and display built-in R colors similar to one by name.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    grid
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    scales
+VignetteBuilder: knitr
