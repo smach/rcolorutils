@@ -62,3 +62,22 @@ plotCol <- function(col, nrow=1, ncol=ceiling(length(col) / nrow),
   upViewport()
   invisible(gl)
 }
+
+
+# Function by Hadley Wickham
+# https://gist.github.com/mbannert/e9fcfa86de3b06068c83
+
+#' Convert rgb color value to hex code
+#'
+#' @param r integer r value
+#' @param g integer g value
+#' @param b integer b value
+#' @author Hadley Wickham
+#' @return character string
+#' @export
+#'
+#' @examples
+#' rgb2hex(255,0,0)
+rgb2hex <- function(r,g,b) {
+  return(rgb(r, g, b, maxColorValue = 255))
+}

@@ -2,3 +2,4 @@
 
 export(nearRcolor)
 export(plotCol)
+export(rgb2hex)
