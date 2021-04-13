@@ -11,7 +11,8 @@ create_color_table <- function() {
   
   DT::datatable(data_for_table, escape = FALSE, filter = 'top', rownames = FALSE, options = list(
     pageLength = 25,
-    lengthMenu = c(25, 50, 100, 1000)
+    lengthMenu = c(25, 50, 100, 1000),
+    search = list(regex = TRUE, caseInsensitive = TRUE)
   ))
 }
 
