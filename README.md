@@ -45,14 +45,14 @@ If you’d like to *see* the colors, wrap the results of `nearRcolor()` in
 the `plotCol()` function:
 
 ``` r
-plotCol(nearRcolor("skyblue"))
+plotCol(nearRcolor("skyblue"), nrow = 2)
 #> Loading required package: grid
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ``` r
-plotCol(nearRcolor("tomato"))
+plotCol(nearRcolor("tomato"), nrow = 3)
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />

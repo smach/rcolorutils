@@ -40,7 +40,7 @@ nearRcolor <- function(rgb, cSpace = c("hsv", "rgb255", "Luv", "Lab"),
 ##' @return the grid layout, invisibly
 ##' @author Marius Hofert, originally
 ##' @export
-plotCol <- function(col, nrow=3, ncol=ceiling(length(col) / nrow),
+plotCol <- function(col, nrow=1, ncol=ceiling(length(col) / nrow),
                     txt.col="black") {
   stopifnot(nrow >= 1, ncol >= 1)
   if(length(col) > nrow*ncol)

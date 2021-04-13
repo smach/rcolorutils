@@ -46,11 +46,11 @@ nearRcolor("tomato")
 If you'd like to _see_ the colors, wrap the results of `nearRcolor()` in the `plotCol()` function:
 
 ```{r }
-plotCol(nearRcolor("skyblue"))
+plotCol(nearRcolor("skyblue"), nrow = 2)
 ```
 
 ```{r }
-plotCol(nearRcolor("tomato"))
+plotCol(nearRcolor("tomato"), nrow = 3)
 ```
 
 Note that the scales package's show_col() function is another way to display the colors:

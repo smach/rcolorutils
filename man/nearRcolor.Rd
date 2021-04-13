@@ -12,7 +12,7 @@ nearRcolor(
 )
 }
 \arguments{
-\item{rgb}{Can be character string of built-in R color name or color rgb}
+\item{rgb}{Can be character string of built-in R color name like "tomato" or color rgb as vector ex c(255,99,71)}
 }
 \description{
 Find close R colors() to a given color (original by Marius Hofert)
