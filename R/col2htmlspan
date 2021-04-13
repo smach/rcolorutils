@@ -1,0 +1,15 @@
+#' Generate HTML to display background color for a built-in R color
+#'
+#' @param colorname character string of a built-in R color name
+#' @param text character string for text you want to appear over the background color, if any
+#' @param textcolor character string for the color of the text you want to appear over the background color, if any
+#'
+#' @return character string with HTML
+#' @export
+#'
+#' @examples
+#' col2htmlspan("firebrick4", col2hex2("firebrick4")
+col2htmlspan <- function(colorname, text = "", textcolor = "white") {
+  colorhex <- col2hex2(colorname)
+  return( glue::glue("<span style='background-color:{colorhex}; color: {textcolor};'>{text}</span>"))
+}
