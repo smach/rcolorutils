@@ -53,7 +53,7 @@ plotCol(nearRcolor("skyblue"), nrow = 2)
 plotCol(nearRcolor("tomato"), nrow = 3)
 ```
 
-Note that the scales package's show_col() function is another way to display the colors:
+Note that the scales package's `show_col()` function is another way to display the colors:
 
 ```{r }
 scales::show_col(nearRcolor("green"))

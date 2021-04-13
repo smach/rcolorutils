@@ -57,7 +57,7 @@ plotCol(nearRcolor("tomato"), nrow = 3)
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
-Note that the scales package’s show\_col() function is another way to
+Note that the scales package’s `show_col()` function is another way to
 display the colors:
 
 ``` r
