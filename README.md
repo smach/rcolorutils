@@ -21,7 +21,15 @@ devtools::install_github("smach/rcolorutils")
 ## What You Can Do
 
 You can see searchable table with all colors with the
-`create_color_table()` function.
+`create_color_table()` function. Lone argument is the length of the
+table page, which defaults to 25.
+
+``` r
+library(rcolorutils)
+create_color_table(page_length = 10)
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 rcolorutils also has functions to help you find built-in colors that are
 similar to one specific color. It’s especially useful to answer a
@@ -30,7 +38,6 @@ question like “what other blues are built in to R”?
 The `nearRcolor()` function will return a vector of nearby colors:
 
 ``` r
-library(rcolorutils)
 nearRcolor("skyblue")
 #>           0.0000           0.0412           0.0507           0.0529 
 #>        "skyblue"     "cadetblue2"       "skyblue2" "darkslategray2" 
@@ -54,13 +61,13 @@ plotCol(nearRcolor("skyblue"), nrow = 2)
 #> Loading required package: grid
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ``` r
 plotCol(nearRcolor("tomato"), nrow = 3)
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 Note that the scales package’s `show_col()` function is another way to
 display the colors:
@@ -69,7 +76,7 @@ display the colors:
 scales::show_col(nearRcolor("green"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 If you don’t get enough colors, increase the distance.
 
@@ -77,7 +84,7 @@ If you don’t get enough colors, increase the distance.
 plotCol(nearRcolor("darkgreen"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 You may have to fiddle with the distance number to get what you want.
 
@@ -85,4 +92,4 @@ You may have to fiddle with the distance number to get what you want.
 plotCol(nearRcolor("darkgreen", "rgb", dist = 80))
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />

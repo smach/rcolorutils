@@ -32,14 +32,20 @@ devtools::install_github("smach/rcolorutils")
 
 ## What You Can Do
 
-You can see searchable table with all colors with the `create_color_table()` function.
+You can see searchable table with all colors with the `create_color_table()` function. Lone argument is the length of the table page, which defaults to 25.
+
+```{r}
+library(rcolorutils)
+create_color_table(page_length = 10)
+
+```
+
 
 rcolorutils also has functions to help you find built-in colors that are similar to one specific color. It's especially useful to answer a question like "what other blues are built in to R"?
 
 The `nearRcolor()` function will return a vector of nearby colors:
 
 ```{r }
-library(rcolorutils)
 nearRcolor("skyblue")
 ```
 

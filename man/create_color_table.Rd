@@ -4,7 +4,10 @@
 \alias{create_color_table}
 \title{Generate an interactive, searchable table of built-in R colors}
 \usage{
-create_color_table()
+create_color_table(page_length = 25)
+}
+\arguments{
+\item{page_length}{integer for length of table page, defaults to 25}
 }
 \value{
 DT object with HTML of table that displays correctly in RStudio

@@ -20,7 +20,7 @@ library(rcolorutils)
 
 This package is designed to help you work with R's built-in colors.
 
-You can see searchable table with all colors with the `create_color_table()` function.
+You can see a searchable table with all colors by running the `create_color_table()` function.
 
 ```{r}
 create_color_table()
@@ -41,7 +41,7 @@ nearRcolor("tomato")
 
 If you'd like to _see_ the colors, wrap the results of `nearRcolor()` in the `plotCol()` function:
 
-```{r }
+```{r fig.width=8}
 plotCol(nearRcolor("skyblue"), nrow = 2)
 ```
 
