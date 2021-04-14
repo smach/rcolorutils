@@ -15,7 +15,7 @@ rcolorutils isn’t on CRAN, so you’ll need to install it with from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("smach/rcolorutils")
+devtools::install_github("smach/rcolorutils", build_vignettes = TRUE)
 ```
 
 ## What You Can Do
