@@ -8,8 +8,9 @@
 create_color_table <- function(page_length = 25) {
   rcolornames <- colors()
   rcolorhex <- col2hex2(rcolornames)
+  rcolorrgb <- purrr::map_df(rcolornames, col2rgb2)
   rcolorhtml <- sapply(rcolornames, col2htmlspan_notext, character_length = 30)
-  data_for_table <- data.frame(rcolornames, rcolorhex, rcolorhtml)
+  data_for_table <- data.frame(rcolornames, rcolorhtml, rcolorhex, rcolorrgb)
 
   DT::datatable(data_for_table, escape = FALSE, filter = 'top', rownames = FALSE, options = list(
     pageLength = page_length,

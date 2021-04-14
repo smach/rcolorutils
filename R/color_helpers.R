@@ -81,3 +81,20 @@ plotCol <- function(col, nrow=1, ncol=ceiling(length(col) / nrow),
 rgb2hex <- function(r,g,b) {
   return(rgb(r, g, b, maxColorValue = 255))
 }
+
+
+
+#' Get named integer of rgb from R built-in color name
+#'
+#' @param colorname character string name of built-in R color
+#'
+#' @return named integers
+#' @export
+#' @examples
+#' col2rgb2("firebrick4")
+col2rgb2 <- function(colorname) {
+  x <- col2rgb(colorname) %>%
+    as.integer()
+  names(x) <- c("red", "green", "blue")
+  return(x)
+}
