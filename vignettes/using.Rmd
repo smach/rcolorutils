@@ -20,7 +20,9 @@ library(rcolorutils)
 
 This package is designed to help you work with R's built-in colors.
 
-You can see a searchable table with all colors by running the `create_color_table()` function. It takes one argument, desired length of table pages, which defaults to 25.
+You can enerate a searchable table with all colors with the `create_color_table()` function. The function's only argument is the length of the table page, which defaults to 25. 
+
+With columns for red, green, and blue, you can sort and filter the table by rgb color attributes as well as color name or hex code. 
 
 ```{r}
 create_color_table(page_length = 10)

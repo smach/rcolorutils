@@ -20,9 +20,12 @@ devtools::install_github("smach/rcolorutils", build_vignettes = TRUE)
 
 ## What You Can Do
 
-You can see searchable table with all colors with the
-`create_color_table()` function. Lone argument is the length of the
-table page, which defaults to 25.
+You can generate a searchable table with all colors with the
+`create_color_table()` function. The function’s only argument is the
+length of the table page, which defaults to 25.
+
+With columns for red, green, and blue, you can sort and filter the table
+by rgb color attributes as well as color name or hex code.
 
 ``` r
 library(rcolorutils)
